@@ -41,12 +41,31 @@ def predict(img):
 def main():
     st.title("Clasificador de Neumonía con ResNet18")
     uploaded_file = st.file_uploader("Subir una imagen", type=["jpg", "jpeg", "png"])
+    
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         st.image(image, caption='Imagen subida', use_column_width=True)
+        
+        # Realizar la predicción
         prediction, confidence = predict(image)
-        st.write("Predicción:", prediction)
-        st.write("Confianza de la predicción: {:.4f}%".format(confidence))
+        
+        # Estilos para mejorar la visualización de los resultados
+        if prediction == "Neumonía":
+            pred_color = "red"
+            conf_color = "#ff4d4d"  # Rojo claro para confianza alta en neumonía
+        else:
+            pred_color = "green"
+            conf_color = "#80c904"  # Verde para confianza alta en normal
+        
+        # Mostrar el resultado con estilo
+        st.markdown(
+            f"<h3 style='color:{pred_color}; text-align:center;'>Predicción: {prediction}</h3>", 
+            unsafe_allow_html=True
+        )
+        st.markdown(
+            f"<h4 style='color:{conf_color}; text-align:center;'>Confianza de la predicción: {confidence:.4f}%</h4>", 
+            unsafe_allow_html=True
+        )
 
 if __name__ == "__main__":
     main()
