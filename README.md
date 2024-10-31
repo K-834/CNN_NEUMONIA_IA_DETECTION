@@ -21,10 +21,12 @@ La detección temprana de neumonía es clave para el tratamiento efectivo de est
 
 ## 🖼️ Capturas de Pantalla
 
-**Entrada:**
+**Entrada**
+
 ![Entrada](https://github.com/user-attachments/assets/0b1af15e-7b44-43c4-94c3-61115d423a1e)
 
-**Salida:**
+**Salida**
+
 ![Salida](https://github.com/user-attachments/assets/ebbbaeda-35d1-4c6c-a60f-f4468f8c6c22)
 
 ---
