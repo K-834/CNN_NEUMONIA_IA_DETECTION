@@ -59,11 +59,11 @@ def main():
         
         # Mostrar el resultado con estilo
         st.markdown(
-            f"<h3 style='color:{pred_color}; text-align:center;'>Predicción: {prediction}</h3>", 
+            f"<h3 style='color:{pred_color}; text-align:center;'>Predicción: <p> {prediction} </p></h3>", 
             unsafe_allow_html=True
         )
         st.markdown(
-            f"<h4 style='color:{conf_color}; text-align:center;'>Confianza de la predicción: {confidence:.4f}%</h4>", 
+            f"<h4 style='color:{conf_color}; text-align:center;'>Confianza de la predicción: <p> {confidence:.4f}%  </p></h4>", 
             unsafe_allow_html=True
         )
 
